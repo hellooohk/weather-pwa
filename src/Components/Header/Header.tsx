@@ -4,7 +4,7 @@ const Header = () => {
     return(
         <header className="header row center">
             <img className='header__img' src={logo} alt="" />
-            <span className='header__title'>Weather Forecaster</span>
+            <span className='header__title'>Weather Wala</span>
         </header>
     )
 }
