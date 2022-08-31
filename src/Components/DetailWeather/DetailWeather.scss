@@ -1,0 +1,223 @@
+.DetailWeather {
+  .DetailWeather-header {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3.975rem;
+    height: 3rem;
+  }
+  .DetailWeather__back {
+    cursor: pointer;
+    .Back__icon {
+      color: #2c2c2c;
+      margin-right: 1.5rem;
+      width: 1.5rem;
+    }
+    .Back__text {
+      color: #0170fe;
+    }
+    .Back__icon,
+    .Back__text {
+      font-size: 1.5rem;
+    }
+  }
+  .DetailWeather__addToList {
+    .addToList__title {
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-right: 1.81rem;
+      color: #2c2c2c;
+    }
+    .addToList__btn {
+      background: #dadada;
+      width: 1.875rem;
+      height: 1.875rem;
+      border-radius: 50%;
+      border: none;
+    }
+    .added,
+    .remove {
+      padding: 1rem 1.2rem;
+      border-radius: 0.4375rem;
+      border: none;
+
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.31rem;
+
+      color: #ffffff;
+    }
+    .added {
+      background: #009456;
+    }
+    .remove {
+      margin-left: 0.6875rem;
+      background: #ec7272;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .DetailWeather__top {
+    .DetailWeather__top--img {
+      width: 7.2rem;
+      margin-bottom: 1.5625rem;
+    }
+    .DetailWeather__temp {
+      font-weight: 500;
+      font-size: 4.375rem;
+      line-height: 6, 5625rem;
+      margin-bottom: 2.6875rem;
+      color: #2c2c2c;
+    }
+    .icon {
+      margin-left: 0.375rem;
+      width: 1.875rem;
+    }
+    .DetailWeather__title {
+      font-size: 1.875rem;
+    }
+  }
+  .DetailWeather__chars,
+  .DetailWeather__graph {
+    padding: 1.75rem 2.125rem;
+    background: #fdfcfc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.6875rem;
+    width: 60vw;
+  }
+  .DetailWeather__graph {
+    position: relative;
+    margin: 1.5625rem 0 2.9375rem 0;
+    .Graph__left {
+      .Graph__left--head {
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+        margin-bottom: 7.1875rem;
+        color: #c4c4c4;
+      }
+      .Graph__left--lod,
+      .Graph__left--rd {
+        font-size: 1.25rem;
+        line-height: 1.4375rem;
+        margin-bottom: 2.625rem;
+
+        .lod--text {
+          color: #9a9a9a;
+        }
+      }
+      .Graph__left--lod {
+        font-weight: 500;
+      }
+    }
+  }
+  .Graph {
+    position: absolute;
+    width: 50%;
+    right: 2rem;
+    top: 1.75rem;
+  }
+}
+.btn-remove {
+  position: absolute;
+  left: 0;
+  top: 4rem;
+}
+@media only screen and (max-width: 768px) {
+  .DetailWeather__addToList {
+    right: 0 !important;
+  }
+  .DetailWeather__back {
+    left: 0 !important;
+  }
+  .Graph {
+    position: static !important;
+    width: 80vw !important;
+  }
+  .DetailWeather {
+    .DetailWeather__chars,
+    .DetailWeather__graph {
+      background: #fdfcfc;
+      border-radius: 0.6875rem;
+      border: none;
+      padding: 0 1.25rem;
+      width: 85vw;
+    }
+    .DetailWeather__chars {
+      margin-bottom: 1.4375rem;
+    }
+    .DetailWeather__back {
+      .Back__text {
+        display: none;
+      }
+    }
+    .DetailWeather__addToList {
+      .addToList__title {
+        font-size: 0.75rem;
+        margin-right: 0.7rem;
+      }
+      .addToList__btn {
+        background: none;
+        border: 1px solid #2c2c2c;
+      }
+    }
+    .DetailWeather__top {
+      margin-top: 3.125rem;
+
+      .DetailWeather__top--img {
+        margin-bottom: 1.31rem;
+      }
+      .DetailWeather__temp {
+        margin-bottom: 1.4375rem;
+      }
+
+      .DetailWeather__title,
+      .DetailWeather__temp {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+      }
+    }
+  }
+  .Graph__left--head {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+
+    color: #c4c4c4;
+  }
+  .Graph__left--lod {
+    margin-bottom: 0.25rem !important;
+    span {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.625rem;
+      line-height: 0.9375rem;
+
+      color: #9a9a9a;
+    }
+  }
+  .Graph__left--rd {
+    margin-bottom: 0.25rem !important;
+    span {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.625rem;
+      line-height: 0.9375rem;
+      color: #9a9a9a;
+    }
+  }
+  .added,
+  .remove {
+    padding: 0.6875rem 0.5rem !important;
+    font-size: 0.75rem !important;
+    line-height: 1.125rem !important;
+  }
+  .Graph__left--head {
+    margin-bottom: 0.5rem !important;
+  }
+}

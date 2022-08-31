@@ -1,0 +1,104 @@
+@use "sass:math";
+$primary-color: rgba(178, 235, 242, 0.5);
+$box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+.Search {
+  align-self: center;
+  width: math.div(831px, 16px) * 1rem;
+  margin: 6.5rem 0 1.25rem 0;
+  border-radius: 1.625rem;
+  box-shadow: $box-shadow;
+  justify-content: space-between;
+  height: 3.625rem;
+  border: 0.0625rem solid #dadada;
+  padding: 0 0.7475rem;
+  .Search__input {
+    border: none;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    width: 100%;
+    margin: 0.5rem 0.3rem;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+  .Search__icon {
+    border-left: 1px solid #dadada;
+    padding-left: 0.6875rem;
+    width: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.Home {
+  p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    color: #000000;
+    margin-top: 1.5rem;
+  }
+}
+.Home__suggestions {
+  align-self: flex-start;
+  margin-bottom: 4.375rem;
+  flex-wrap: wrap;
+  .Home__suggestions--card {
+    padding: 0.3rem 1rem;
+    background: #fdfcfc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.25rem;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin: 0 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.Home__cloud {
+  margin-top: 8rem;
+  img {
+    width: 25.296875rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Search {
+    width: 80vw;
+    border-radius: 0.9375rem;
+    height: 2.875rem;
+    margin-top: 2.75rem;
+    .Search__icon {
+      border-left: none;
+    }
+  }
+  .Home__cloud {
+    margin-top: 13rem;
+    align-items: center;
+    img {
+      width: 12rem;
+    }
+    p {
+      font-size: 0.9375rem;
+    }
+  }
+  .Home__suggestions {
+    .Home__suggestions--card {
+      font-size: 0.625rem;
+      line-height: 0.9375rem;
+      padding: 0.5rem 1.125rem;
+      border-radius: 0.4375rem;
+    }
+  }
+  .carousel{
+    width: 90vw !important;
+  }
+}

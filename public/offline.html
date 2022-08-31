@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+            body {
+                font-family: sans-serif;
+                height: 100%;
+                margin: 0;
+                background: linear-gradient(to bottom right,#0096FF,#00D7FF);
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+        
+            .city {
+                align-items: center;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 5rem 3rem;
+                border-radius: 1rem;
+                background: #fff;
+            }
+
+            .city-name {
+                font-size: 2em;
+                font-weight: 400;
+                letter-spacing: 0.1rem;
+                animation-name: slideAnimation;
+                animation-duration: 1s;
+                
+            }
+            .city-img{
+                width: 10rem;
+            }
+            .Copyright{
+                font-size: 1rem;
+                letter-spacing: 0.2rem;
+            }
+            @keyframes slideAnimation {
+                0%{
+                    opacity: 0;
+                    transform: translateX(10rem);
+                }
+                80%{
+                    transform: translateX(-2rem);
+                }
+                100%{
+                    transform: translate(0);
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="city">
+            <h2 class="city-name">
+                <div>Please go online to check the current weather.</div>
+                <div>😀</div>
+            </h2>
+            <div class="Copyright">Created with ❤️ by hk</div>
+        </div>
+    </body>
+</html>
